@@ -7,8 +7,8 @@ public class Palindrome {
         String rev = "";
         int strlength = str.length();
 
-        for(int i=str.length();i>0;i--){
-             rev = rev + str.charAt(i-1);
+        for(int i=str.length()-1;i>=0;i--){
+             rev = rev + str.charAt(i);
         }
         if(str.equals(rev)){
             System.out.println(",Palindrome");
