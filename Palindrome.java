@@ -2,18 +2,17 @@ public class Palindrome {
 
     public static void main(String[] args) {
 
-
         String str = "nayan";
-        String rev = "";
-        int strlength = str.length();
+        int n = str.length();
 
-        for(int i=str.length();i>0;i--){
-             rev = rev + str.charAt(i-1);
+        // Loop to check if the string is a palindrome
+        for(int i = 0; i < n ; i++) {
+            if(str.charAt(i) != str.charAt(n - i - 1)) {
+                System.out.println("It's not a palindrome");
+                return;
+            }
         }
-        if(str.equals(rev)){
-            System.out.println(",Palindrome");
-        }else {
-            System.out.println("Its,Not a palindrome");
-        }
+
+        System.out.println("Palindrome");
     }
 }
